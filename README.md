@@ -1,6 +1,7 @@
 # rust-collatz
 Rust iterator for [Collatz conjecture](http://en.wikipedia.org/wiki/Collatz_conjecture)
 
+[![Build Status](https://travis-ci.org/rustomax/rust-collatz.svg?branch=master)](https://travis-ci.org/rustomax/rust-collatz)
 
 How to compile and run sample code:
 
