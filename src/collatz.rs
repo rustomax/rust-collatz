@@ -20,11 +20,12 @@ impl Iterator for Collatz {
         if self.done { return None };
 
         let result = Some(self.curr);
-        match self.curr {
-            1 => { self.done = true },
-            n if n % 2 == 0 => { self.curr = self.curr / 2 },
-            _ => { self.curr = self.curr * 3 + 1 },
-        }
+
+        self.curr = match self.curr {
+            1 => { self.done = true; 1 },
+            n if n % 2 == 0 => { n / 2 },
+            n => { n * 3 + 1 },
+        };
 
         result
     }
