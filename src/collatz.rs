@@ -18,9 +18,7 @@ impl Iterator for Collatz {
     fn next(&mut self) -> Option<u64> {
 
         if self.done { return None };
-
         let result = Some(self.curr);
-
         self.curr = match self.curr {
             1 => { self.done = true; 1 },
             n if n % 2 == 0 => { n / 2 },
